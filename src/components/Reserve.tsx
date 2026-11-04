@@ -125,82 +125,91 @@ export default function Reserve() {
   };
 
   return (
-    <section id="reserve" className="border-b border-border bg-bg py-section">
+    <section id="reserve" className="border-b border-border bg-surface-warm py-section">
       <div className="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
-        <div className="max-w-xl">
-          <h2 className="text-2xl font-heading font-bold text-fg sm:text-3xl">
-            Reserve a table
-          </h2>
-          <p className="mt-2 text-sm font-body text-muted sm:text-base">
-            Secure your spot before the jollof runs out.
-          </p>
+        <div className="mx-auto max-w-2xl rounded-2xl border border-border bg-surface p-8 shadow-md sm:p-12">
+          <div className="text-center">
+            <span className="text-xs font-body font-bold uppercase tracking-widest text-accent">
+              Table Bookings
+            </span>
+            <h2 className="mt-2 text-3xl font-heading font-extrabold tracking-tight text-fg sm:text-4xl">
+              Reserve a table
+            </h2>
+            <p className="mt-2 text-base font-body text-muted">
+              Secure your spot before the jollof runs out.
+            </p>
+          </div>
 
           {successMessage && (
             <div
               role="alert"
-              className="mt-6 rounded-token border border-border bg-surface p-4 text-sm font-body text-fg"
+              className="mt-6 rounded-token border border-emerald-200 bg-emerald-50 p-4 text-sm font-body text-emerald-900"
             >
-              <p className="font-medium">{successMessage}</p>
+              <p className="font-semibold">{successMessage}</p>
             </div>
           )}
 
           {serverError && (
             <div
               role="alert"
-              className="mt-6 rounded-token border border-border bg-surface p-4 text-sm font-body text-fg"
+              className="mt-6 rounded-token border border-rose-200 bg-rose-50 p-4 text-sm font-body text-rose-900"
             >
-              <p className="font-medium text-fg">{serverError}</p>
+              <p className="font-semibold">{serverError}</p>
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="mt-8 space-y-5" noValidate>
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-body font-medium text-fg"
-              >
-                Name *
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="mt-1.5 block w-full rounded-token border border-border bg-bg px-3.5 py-2 text-sm font-body text-fg focus-visible:ring-2 focus-visible:ring-accent"
-              />
-              {errors.name && (
-                <p className="mt-1 text-xs font-body text-muted">{errors.name}</p>
-              )}
+          <form onSubmit={handleSubmit} className="mt-8 space-y-6" noValidate>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-xs font-body font-bold uppercase tracking-wider text-fg"
+                >
+                  Name *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  placeholder="e.g. Samuel Ade"
+                  className="mt-2 block w-full rounded-token border border-border bg-bg px-4 py-2.5 text-sm font-body text-fg placeholder:text-muted/60 focus-visible:ring-2 focus-visible:ring-accent"
+                />
+                {errors.name && (
+                  <p className="mt-1.5 text-xs font-body font-medium text-rose-600">{errors.name}</p>
+                )}
+              </div>
+
+              <div>
+                <label
+                  htmlFor="phone"
+                  className="block text-xs font-body font-bold uppercase tracking-wider text-fg"
+                >
+                  Phone *
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  placeholder="e.g. +234 800 000 0000"
+                  className="mt-2 block w-full rounded-token border border-border bg-bg px-4 py-2.5 text-sm font-body text-fg placeholder:text-muted/60 focus-visible:ring-2 focus-visible:ring-accent"
+                />
+                {errors.phone && (
+                  <p className="mt-1.5 text-xs font-body font-medium text-rose-600">{errors.phone}</p>
+                )}
+              </div>
             </div>
 
-            <div>
-              <label
-                htmlFor="phone"
-                className="block text-sm font-body font-medium text-fg"
-              >
-                Phone *
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                className="mt-1.5 block w-full rounded-token border border-border bg-bg px-3.5 py-2 text-sm font-body text-fg focus-visible:ring-2 focus-visible:ring-accent"
-              />
-              {errors.phone && (
-                <p className="mt-1 text-xs font-body text-muted">{errors.phone}</p>
-              )}
-            </div>
-
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <div>
                 <label
                   htmlFor="date"
-                  className="block text-sm font-body font-medium text-fg"
+                  className="block text-xs font-body font-bold uppercase tracking-wider text-fg"
                 >
                   Date *
                 </label>
@@ -211,17 +220,17 @@ export default function Reserve() {
                   value={formData.date}
                   onChange={handleChange}
                   required
-                  className="mt-1.5 block w-full rounded-token border border-border bg-bg px-3.5 py-2 text-sm font-body text-fg focus-visible:ring-2 focus-visible:ring-accent"
+                  className="mt-2 block w-full rounded-token border border-border bg-bg px-4 py-2.5 text-sm font-body text-fg focus-visible:ring-2 focus-visible:ring-accent"
                 />
                 {errors.date && (
-                  <p className="mt-1 text-xs font-body text-muted">{errors.date}</p>
+                  <p className="mt-1.5 text-xs font-body font-medium text-rose-600">{errors.date}</p>
                 )}
               </div>
 
               <div>
                 <label
                   htmlFor="time"
-                  className="block text-sm font-body font-medium text-fg"
+                  className="block text-xs font-body font-bold uppercase tracking-wider text-fg"
                 >
                   Time *
                 </label>
@@ -232,10 +241,10 @@ export default function Reserve() {
                   value={formData.time}
                   onChange={handleChange}
                   required
-                  className="mt-1.5 block w-full rounded-token border border-border bg-bg px-3.5 py-2 text-sm font-body text-fg focus-visible:ring-2 focus-visible:ring-accent"
+                  className="mt-2 block w-full rounded-token border border-border bg-bg px-4 py-2.5 text-sm font-body text-fg focus-visible:ring-2 focus-visible:ring-accent"
                 />
                 {errors.time && (
-                  <p className="mt-1 text-xs font-body text-muted">{errors.time}</p>
+                  <p className="mt-1.5 text-xs font-body font-medium text-rose-600">{errors.time}</p>
                 )}
               </div>
             </div>
@@ -243,7 +252,7 @@ export default function Reserve() {
             <div>
               <label
                 htmlFor="guests"
-                className="block text-sm font-body font-medium text-fg"
+                className="block text-xs font-body font-bold uppercase tracking-wider text-fg"
               >
                 Guests (1 to 12) *
               </label>
@@ -256,17 +265,17 @@ export default function Reserve() {
                 value={formData.guests}
                 onChange={handleChange}
                 required
-                className="mt-1.5 block w-full rounded-token border border-border bg-bg px-3.5 py-2 text-sm font-body text-fg focus-visible:ring-2 focus-visible:ring-accent"
+                className="mt-2 block w-full rounded-token border border-border bg-bg px-4 py-2.5 text-sm font-body text-fg focus-visible:ring-2 focus-visible:ring-accent"
               />
               {errors.guests && (
-                <p className="mt-1 text-xs font-body text-muted">{errors.guests}</p>
+                <p className="mt-1.5 text-xs font-body font-medium text-rose-600">{errors.guests}</p>
               )}
             </div>
 
             <div>
               <label
                 htmlFor="notes"
-                className="block text-sm font-body font-medium text-fg"
+                className="block text-xs font-body font-bold uppercase tracking-wider text-fg"
               >
                 Notes (optional)
               </label>
@@ -276,7 +285,8 @@ export default function Reserve() {
                 rows={3}
                 value={formData.notes}
                 onChange={handleChange}
-                className="mt-1.5 block w-full rounded-token border border-border bg-bg px-3.5 py-2 text-sm font-body text-fg focus-visible:ring-2 focus-visible:ring-accent"
+                placeholder="Any special requests or dietary needs..."
+                className="mt-2 block w-full rounded-token border border-border bg-bg px-4 py-2.5 text-sm font-body text-fg placeholder:text-muted/60 focus-visible:ring-2 focus-visible:ring-accent"
               />
             </div>
 
@@ -284,9 +294,9 @@ export default function Reserve() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="rounded-token border border-accent bg-accent px-6 py-2.5 text-sm font-body font-medium text-bg hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60 focus-visible:ring-2 focus-visible:ring-accent"
+                className="w-full rounded-token bg-accent py-3.5 text-sm font-body font-bold uppercase tracking-wider text-white shadow-md hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-60 focus-visible:ring-2 focus-visible:ring-accent"
               >
-                {isSubmitting ? "Booking..." : "Book Table"}
+                {isSubmitting ? "Booking..." : "Reserve a table"}
               </button>
             </div>
           </form>
@@ -295,4 +305,3 @@ export default function Reserve() {
     </section>
   );
 }
-

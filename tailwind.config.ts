@@ -13,7 +13,9 @@ const config: Config = {
         fg: "var(--fg)",
         muted: "var(--muted)",
         surface: "var(--surface)",
+        "surface-warm": "var(--surface-warm)",
         accent: "var(--accent)",
+        "accent-hover": "var(--accent-hover)",
         border: "var(--border)",
       },
       fontFamily: {
