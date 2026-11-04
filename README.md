@@ -7,7 +7,7 @@ This repository serves as the foundational demo application for a live Google De
 ## Prerequisites
 
 - **Node.js**: version 20 or higher (`node -v`)
-- **Package Manager**: `pnpm` (recommended) or `npm`
+- **Package Manager**: `npm`
 
 ## Getting Started
 
@@ -19,15 +19,11 @@ This repository serves as the foundational demo application for a live Google De
 
 2. Install dependencies:
    ```bash
-   pnpm install
-   # or
    npm install
    ```
 
 3. Start the development server:
    ```bash
-   pnpm dev
-   # or
    npm run dev
    ```
 
@@ -67,6 +63,7 @@ agent-skills-gdg/
 ├── .gitignore
 ├── next.config.mjs
 ├── package.json
+├── package-lock.json
 ├── postcss.config.mjs
 ├── PRD.md
 ├── README.md
