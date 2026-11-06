@@ -13,14 +13,12 @@ const config: Config = {
         fg: "var(--fg)",
         muted: "var(--muted)",
         surface: "var(--surface)",
-        "surface-warm": "var(--surface-warm)",
         accent: "var(--accent)",
-        "accent-hover": "var(--accent-hover)",
         border: "var(--border)",
       },
       fontFamily: {
-        body: ["var(--font-body)"],
-        heading: ["var(--font-heading)"],
+        body: ["var(--font-body)", "ui-sans-serif", "system-ui", "sans-serif"],
+        heading: ["var(--font-heading)", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       borderRadius: {
         token: "var(--radius)",

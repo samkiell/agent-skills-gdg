@@ -1,46 +1,27 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-stone-900 text-stone-200 py-16">
-      <div className="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
+    <footer className="border-t border-white/10 bg-[#070A12] py-16 text-slate-400">
+      <div className="mx-auto max-w-container px-6 sm:px-8 lg:px-12">
+        <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div>
             <div className="flex items-center gap-2">
-              <span className="flex h-8 w-8 items-center justify-center rounded-token bg-accent text-xs font-bold text-white shadow-sm">
-                BR
-              </span>
-              <span className="text-xl font-heading font-black text-white">
+              <span className="text-xl">🍲</span>
+              <span className="text-2xl font-black tracking-tight text-white">
                 Buka Republic
               </span>
             </div>
-            <p className="mt-4 text-sm font-body leading-relaxed text-stone-400">
+            <p className="mt-3 text-base text-slate-400">
               Buka Republic. Open whenever the jollof is ready.
             </p>
-          </div>
-
-          <div>
-            <p className="text-xs font-body font-bold uppercase tracking-widest text-accent">
-              Visit Us
-            </p>
-            <p className="mt-4 text-sm font-body text-stone-300">
+            <p className="mt-1 text-sm text-purple-300">
               12 Suya Lane, Ife
             </p>
-            <p className="mt-2 text-xs font-body text-stone-400">
-              Walk-ins welcome &bull; Reservations recommended
-            </p>
           </div>
-
-          <div>
-            <p className="text-xs font-body font-bold uppercase tracking-widest text-accent">
-              About This Project
-            </p>
-            <p className="mt-4 text-xs font-body leading-relaxed text-stone-400">
+          <div className="border-t border-white/10 pt-6 md:border-t-0 md:pt-0">
+            <p className="text-sm text-slate-500">
               Made for a GDG demo. No real food was harmed.
             </p>
           </div>
-        </div>
-
-        <div className="mt-12 border-t border-stone-800 pt-8 text-center text-xs font-body text-stone-500">
-          <p>&copy; {new Date().getFullYear()} Buka Republic. All rights reserved.</p>
         </div>
       </div>
     </footer>

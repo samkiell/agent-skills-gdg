@@ -2,35 +2,41 @@ import { testimonials } from "@/data/testimonials";
 
 export default function Testimonials() {
   return (
-    <section id="reviews" className="border-b border-border bg-bg py-section">
-      <div className="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <span className="text-xs font-body font-bold uppercase tracking-widest text-accent">
-            Guest Experiences
-          </span>
-          <h2 className="mt-2 text-3xl font-heading font-extrabold tracking-tight text-fg sm:text-4xl">
-            Reviews
+    <section id="reviews" className="relative bg-[#0B0F19] py-section">
+      <div className="mx-auto max-w-container px-6 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
+            <span className="mr-3">💬</span>
+            <span className="bg-gradient-to-r from-white via-purple-100 to-purple-300 bg-clip-text text-transparent">
+              Reviews
+            </span>
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-base font-body text-muted sm:text-lg">
+          <p className="mt-4 text-base sm:text-lg font-normal text-slate-300">
             Honest words from people who couldn&apos;t keep quiet.
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-3">
           {testimonials.map((review) => (
             <figure
               key={review.id}
-              className="relative flex flex-col justify-between rounded-token border border-border bg-surface p-8 shadow-sm hover:border-accent/30 hover:shadow-md"
+              className="flex flex-col justify-between rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl shadow-lg hover:border-purple-500/30 hover:shadow-[0_0_20px_rgba(168,85,247,0.2)]"
             >
               <div>
-                <div className="text-accent text-3xl font-serif leading-none">“</div>
-                <blockquote className="mt-3 text-base font-body leading-relaxed text-fg">
-                  {review.quote}
+                <div className="flex gap-1 text-sm text-yellow-400">
+                  <span>⭐</span>
+                  <span>⭐</span>
+                  <span>⭐</span>
+                  <span>⭐</span>
+                  <span>⭐</span>
+                </div>
+                <blockquote className="mt-4 text-base font-normal leading-relaxed text-slate-200">
+                  &ldquo;{review.quote}&rdquo;
                 </blockquote>
               </div>
-              <figcaption className="mt-6 border-t border-border pt-4 text-xs font-body text-muted">
-                <span className="font-heading font-bold text-fg text-sm">{review.author}</span>
-                <span className="ml-1 text-accent font-medium">({review.location})</span>
+              <figcaption className="mt-6 border-t border-white/10 pt-4 text-sm text-slate-400">
+                <span className="font-bold text-white">{review.author}</span>,{" "}
+                <span className="text-purple-300">{review.location}</span>
               </figcaption>
             </figure>
           ))}

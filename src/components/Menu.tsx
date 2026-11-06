@@ -1,35 +1,40 @@
 import { menuCategories, menuItems } from "@/data/menu";
 import MenuItemCard from "./MenuItemCard";
 
+const categoryEmojis: Record<string, string> = {
+  Starters: "🥟",
+  Mains: "🍲",
+  Sides: "🍟",
+  Drinks: "🍹",
+};
+
 export default function Menu() {
   return (
-    <section id="menu" className="border-b border-border bg-bg py-section">
-      <div className="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <span className="text-xs font-body font-bold uppercase tracking-widest text-accent">
-            Curated Offerings
-          </span>
-          <h2 className="mt-2 text-3xl font-heading font-extrabold tracking-tight text-fg sm:text-4xl">
-            Menu
+    <section id="menu" className="relative bg-[#0B0F19] py-section">
+      <div className="mx-auto max-w-container px-6 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
+            <span className="mr-3">🍽️</span>
+            <span className="bg-gradient-to-r from-white via-purple-100 to-purple-300 bg-clip-text text-transparent">
+              Menu
+            </span>
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-base font-body text-muted sm:text-lg">
+          <p className="mt-4 text-base sm:text-lg font-normal text-slate-300">
             Food so good, your ancestors would ask for a plate.
           </p>
         </div>
 
-        <div className="mt-14 space-y-16">
+        <div className="mt-16 space-y-16">
           {menuCategories.map((category) => {
             const items = menuItems.filter((item) => item.category === category);
+            const emoji = categoryEmojis[category] || "✨";
             return (
               <div key={category} className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <h3 className="text-xl font-heading font-bold text-fg sm:text-2xl">
+                <div className="flex items-center gap-3 border-b border-white/10 pb-4">
+                  <span className="text-2xl">{emoji}</span>
+                  <h3 className="text-2xl font-bold text-white">
                     {category}
                   </h3>
-                  <div className="h-px flex-1 bg-border"></div>
-                  <span className="text-xs font-body font-semibold text-muted">
-                    {items.length} dishes
-                  </span>
                 </div>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
                   {items.map((item) => (
