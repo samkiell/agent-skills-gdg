@@ -3,16 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --bg: #ffffff;
-  --fg: #111111;
-  --muted: #666666;
-  --surface: #f7f7f7;
-  --accent: #222222;
-  --border: #e2e2e2;
-  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-heading: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --radius: 0.375rem;
-  --space-section: 4.5rem;
+  --bg: #FFF8EE;        /* cream */
+  --fg: #1C1917;        /* charcoal */
+  --muted: #6B5B4E;     /* warm brown gray */
+  --surface: #FBEBD3;   /* sand, for cards and bands */
+  --accent: #C2410C;    /* ember orange, passes contrast with cream text */
+  --border: #EAD9C0;
+  --radius: 14px;
+  --space-section: 6rem;
   --container: 72rem;
 }
 
@@ -24,10 +22,10 @@ body {
   background-color: var(--bg);
   color: var(--fg);
   font-family: var(--font-body);
+  line-height: 1.6;
 }
 
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
-

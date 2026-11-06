@@ -17,8 +17,8 @@ const config: Config = {
         border: "var(--border)",
       },
       fontFamily: {
-        body: ["var(--font-body)"],
-        heading: ["var(--font-heading)"],
+        body: ["var(--font-body)", "sans-serif"],
+        heading: ["var(--font-heading)", "serif"],
       },
       borderRadius: {
         token: "var(--radius)",
