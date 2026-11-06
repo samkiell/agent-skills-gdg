@@ -4,8 +4,8 @@ A single-page restaurant landing site with zero chill, smoky jollof, built as a 
 
 ## Live Previews
 
-- **Starting point (`before`)**: [https://beforeagentskillsgdg.vercel.app](https://beforeagentskillsgdg.vercel.app)
-- **Finished version (`main`)**: [https://agentskillsgdg.vercel.app](https://agentskillsgdg.vercel.app)
+- **Starting point (`before`)**: [https://beforeagentskillsgdg.vercel.app/](https://beforeagentskillsgdg.vercel.app/)
+- **Finished version (`main`)**: [https://agentskillsgdg.vercel.app/](https://agentskillsgdg.vercel.app/)
 
 ## How to Follow Along
 
@@ -21,7 +21,7 @@ To follow along with the workshop demonstration from the start:
    ```bash
    git checkout before
    ```
-   > The `before` branch is the starting point of the demo: it has no design skill installed and represents the raw, unstyled state. The `main` branch represents the finished version after the agent applies the design system skill.
+   > The `before` branch is the starting point of the demo: it has no design skill installed and represents the raw state. The `main` branch represents the finished version after the agent applies the design system skill.
 
 3. Install dependencies:
    ```bash
