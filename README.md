@@ -1,15 +1,17 @@
+this is the finished version. the starting point is the main branch.
+
 # Buka Republic (agent-skills-gdg)
 
 A single-page restaurant landing site with zero chill, smoky jollof, built as a live demo application for Google Developer Groups (GDG) on **Agent Skills**.
 
 ## Live Previews
 
-- **Starting point (`before`)**: [https://beforeagentskillsgdg.vercel.app/](https://beforeagentskillsgdg.vercel.app/)
-- **Finished version (`main`)**: [https://agentskillsgdg.vercel.app/](https://agentskillsgdg.vercel.app/)
+- **Starting point (`main`)**: [https://beforeagentskillsgdg.vercel.app/](https://beforeagentskillsgdg.vercel.app/)
+- **Finished version (`after`)**: [https://agentskillsgdg.vercel.app/](https://agentskillsgdg.vercel.app/)
 
 ## How to Follow Along
 
-To follow along with the workshop demonstration from the start:
+To follow along from the starting point (`main`), clone the repository:
 
 1. Clone the repository:
    ```bash
@@ -17,23 +19,17 @@ To follow along with the workshop demonstration from the start:
    cd agent-skills-gdg
    ```
 
-2. Switch to the `before` branch:
-   ```bash
-   git checkout before
-   ```
-   > The `before` branch is the starting point of the demo: it has no design skill installed and represents the raw state. The `main` branch represents the finished version after the agent applies the design system skill.
-
-3. Install dependencies:
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-4. Start the development server:
+3. Start the development server:
    ```bash
    npm run dev
    ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Prerequisites
 
@@ -49,7 +45,7 @@ agent-skills-gdg/
 │       ├── api-routes/
 │       │   └── SKILL.md
 │       ├── design-system/
-│       │   └── SKILL.md         # Added on main branch
+│       │   └── SKILL.md         # Present on the finished after branch
 │       └── motion-system/
 │           └── SKILL.md
 ├── public/                      # Static assets
