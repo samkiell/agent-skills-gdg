@@ -4,36 +4,21 @@ A single-page restaurant landing site with zero chill, smoky jollof, built as a 
 
 ## Live Previews
 
-- **Starting point (`before`)**: [https://beforeagentskillsgdg.vercel.app/](https://beforeagentskillsgdg.vercel.app/)
-- **Finished version (`main`)**: [https://agentskillsgdg.vercel.app/](https://agentskillsgdg.vercel.app/)
+- **Starting point (`main`)**: [https://beforeagentskillsgdg.vercel.app/](https://beforeagentskillsgdg.vercel.app/)
+- **Finished version (`after`)**: [https://agentskillsgdg.vercel.app/](https://agentskillsgdg.vercel.app/)
 
 ## How to Follow Along
 
-To follow along with the workshop demonstration from the start:
+The `main` branch is the starting point (purple design, no design-system skill). The `after` branch is the finished version.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/samkiell/agent-skills-gdg.git
-   cd agent-skills-gdg
-   ```
+```bash
+git clone https://github.com/samkiell/agent-skills-gdg.git
+cd agent-skills-gdg
+npm install
+npm run dev
+```
 
-2. Switch to the `before` branch:
-   ```bash
-   git checkout before
-   ```
-   > The `before` branch is the starting point of the demo: it has no design skill installed and represents the raw state. The `main` branch represents the finished version after the agent applies the design system skill.
-
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-4. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Prerequisites
 
@@ -87,4 +72,4 @@ agent-skills-gdg/
 
 Agent skills reside in `.agents/skills/<skill-name>/SKILL.md`.
 
-This branch intentionally ships **without** a design skill installed. In the GDG workshop session, attendees will watch an AI agent pick up the `design-system` skill to re-skin and elevate the user interface without altering the underlying application architecture.
+The starting point (`main`) intentionally ships **without** a design skill installed. In the GDG workshop session, attendees will watch an AI agent pick up the `design-system` skill to re-skin and elevate the user interface without altering the underlying application architecture.
